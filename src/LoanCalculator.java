@@ -35,12 +35,16 @@ public class LoanCalculator {
         double pokokPerBulan = pokokUtang / bulan;
         double bungaPerBulan = pokokUtang * bunga / 12;
         double angsuranPerBulan = pokokPerBulan + bungaPerBulan;
+        System.out.println("\n==== Angsuran Perbulan ====");
+        System.out.println("Pokok Perbulan: " + String.format("%,.0f", pokokUtang) + " / " + bulan + " (Bulan) " + " = " + String.format("%,.0f", pokokPerBulan));
+        System.out.println("Bunga Perbulan: " + String.format("%,.0f", pokokUtang) + " * " + bunga + " / " + "12" + " = " + String.format("%,.0f", bungaPerBulan));
 
         // Output hasil
         System.out.println("\n==== Hasil ====");
         System.out.println("Pokok Utang: Rp " + String.format("%,.0f", pokokUtang));
         System.out.println("Bunga: " + String.format("%.1f", bunga * 100) + "%");
-        System.out.println("Bunga per bulan: " + String.format("%,.0f", bungaPerBulan));
-        System.out.println("Angsuran per bulan: Rp " + String.format("%,.0f", angsuranPerBulan));
+        System.out.println("Pokok Perbulan: " + String.format("%,.0f", pokokPerBulan));
+        System.out.println("Bunga Perbulan: " + String.format("%,.0f", bungaPerBulan));
+        System.out.println("Angsuran Perbulan: Rp " + String.format("%,.0f", angsuranPerBulan));
     }
 }
